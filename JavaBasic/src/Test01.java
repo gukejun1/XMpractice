@@ -3,6 +3,10 @@
  */
 public class Test01 {
     public static void main(String[] args) {
-        System.out.println("xiaoming");
+        int x =0;
+        int y =0;
+        int z = 10;
+        y = x > 3 ? 100:200 ;//y=200
+        System.out.println("200的结果："+y+z);
     }
 }

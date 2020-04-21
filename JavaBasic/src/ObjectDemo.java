@@ -3,9 +3,15 @@
  */
 public class ObjectDemo {
     public static void main(String[] args) {
-        Person per1 = new Person(12);
-        Person per2 = new Person(13);
-        System.out.println();
+        Person p1 = new Person(12);
+        Person p2 = new Person(12);
+        System.out.println(p1 == p2);
+        System.out.println(p1 == p1);
+        System.out.println(p1.equals(p2));
+        System.out.println(p1.equals(p1));
+        System.out.println(p1);
+        System.out.println(p2);
+
     }
 }
 class Person extends Object{
@@ -14,16 +20,14 @@ class Person extends Object{
         this.age = age;
     }
     public boolean equals(Object obj){
-        if(this==obj){
+        if(this == obj){
             return true;
         }
         if(!(obj instanceof Person)){
             throw new ClassCastException("类型不对，请改正");
         }
         Person p = (Person) obj;
-
         return this.age == p.age;
-
     }
     public String toString(){
         return "Person[age:"+age+"]";

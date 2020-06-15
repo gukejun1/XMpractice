@@ -3,7 +3,8 @@
  */
 public class Exception {
     public static void main(String[] args) {
-
+        Person1 p = new Person1("xiaoming",12);
+        System.out.println(p);
     }
 }
 class Person1{
@@ -21,5 +22,7 @@ class NoAgeException extends RuntimeException{
     NoAgeException(){
         super();
     }
-
+    NoAgeException(String message){
+        super(message);
+    }
 }
